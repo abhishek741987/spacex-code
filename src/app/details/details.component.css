@@ -1,0 +1,79 @@
+.mat-card {
+    transition: box-shadow 280ms cubic-bezier(.4, 0, .2, 1);
+    display: block;
+    position: relative;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 2px 1px -1px rgb(0 0 0 / 20%), 0 1px 1px 0 rgb(0 0 0 / 14%), 0 1px 3px 0 rgb(0 0 0 / 12%);
+    cursor: pointer;
+}
+
+.mat-select-panel {
+    background: red;
+}
+
+::ng-deep .mat-select-content {
+    width: 2000px;
+    background-color: red;
+    font-size: 10px;
+}
+
+.mat-card-header {
+    display: flex;
+    flex-direction: row;
+}
+
+.mat-card-header-text {
+    margin: 0 16px;
+}
+
+.img-avatar {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+
+.outer-container {
+    padding-top: 20px;
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: repeat(auto-fill, 350px);
+    justify-content: center;
+}
+
+.header-text {
+    margin: 0 16px;
+}
+
+.title {
+    margin-bottom: 12px;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.mat-card-header .mat-card-title {
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.mat-card-header .mat-card-subtitle:not(:first-child) {
+    margin-top: -8px;
+}
+
+.mat-card-image {
+    width: calc(100% + 32px);
+    margin: 0 -16px 16px -16px;
+}
+
+.filterclass {
+    text-align: center;
+}
+
+.progress-container {
+    text-align: center;
+    position: relative;
+    top: 25%;
+    left: 45%
+}

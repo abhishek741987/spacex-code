@@ -1,0 +1,32 @@
+<div class="filterclass">
+
+    <mat-form-field>
+        <mat-label>Filters</mat-label>
+        <mat-select (selectionChange)="onChange($event.value)">
+            <mat-option *ngFor="let val of options" [value]="val.value">
+                {{val.name}}
+            </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+</div>
+<div class="progress-container" *ngIf="loading">
+    <mat-spinner></mat-spinner>
+</div>
+
+
+<div class="outer-container" *ngIf="!loading">
+
+
+    <div class="mat-card" *ngFor="let details of launchDetails" [routerLink]="['/', details.flight_number]">
+
+        <div class="mat-card-header">
+            <img class="img-avatar" src="{{details.links.mission_patch_small}}">
+            <div class="mat-card-header-text">
+                <div class="title"> {{details.mission_name}}</div>
+                <div class="subtitle">{{details.rocket.rocket_name}} - Launched {{ details.launch_date_utc | calcTime }}</div>
+            </div>
+        </div>
+        <img height="300" class="mat-card-image" src="{{details.links.flickr_images[0]}}">
+    </div>
+</div>
